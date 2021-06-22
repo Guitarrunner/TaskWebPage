@@ -1,0 +1,16 @@
+{% extends "techCourses/guide.html" %}
+{% block content %}
+<h1>All Available Courses</h1>
+ {% for course in courses%}
+<article class="media content-section">
+    <div class="media-body">
+    <div class="article-metadata">
+      <small class="mr-2" >{{ course.professor}}</small>
+      <small class="text-muted">{{ course.code }}</small>
+    </div>
+    <h2><a class="article-title" href="/course">{{ course.courseName }}</a></h2>
+  </div>
+</article>
+
+ {% endfor %}
+{% endblock content %}
